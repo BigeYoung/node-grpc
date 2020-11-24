@@ -6,5 +6,3 @@ RUN vue create node-grpc --default
 WORKDIR /node-grpc/
 RUN npm install --save @grpc/grpc-js
 RUN npm install --save @grpc/proto-loader
-RUN sed -i '1s/^/import '@grpc/grpc-js'\nimport '@grpc/proto-loader'\n/' file
-RUN npm run build
